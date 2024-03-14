@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_play"
+    tools:context=".PlayActivity">
+
+    <ImageView
+        android:id="@+id/tileA1"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="328dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileA2"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="328dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileA3"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="328dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileB1"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="444dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileB2"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="444dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileB3"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="444dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/o" />
+
+    <ImageView
+        android:id="@+id/tileC1"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="564dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileC2"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="564dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+    <ImageView
+        android:id="@+id/tileC3"
+        android:layout_width="81dp"
+        android:layout_height="91dp"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="564dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/x" />
+
+
+    <ImageView
+        android:id="@+id/imgGrid"
+        android:layout_width="343dp"
+        android:layout_height="448dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943"
+        app:srcCompat="@drawable/grid" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
