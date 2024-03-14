@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_home"
-    tools:context=".MainActivity"
+    tools:context=".View.MainActivity"
     >
 
     <TextView
@@ -57,7 +57,7 @@
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnPlayGame"
         android:layout_width="179dp"
         android:layout_height="55dp"
         android:backgroundTint="#E91E63"
