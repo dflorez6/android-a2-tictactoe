@@ -73,9 +73,7 @@ public class MainActivity extends AppCompatActivity {
                     if (results == RESULT_CANCELED) {
                         resetInputs();
                     }
-
                 }
-
             }
     );
 
@@ -86,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
     public void playGame(String player1, String player2) {
         Intent intentObj = new Intent(this, PlayActivity.class);
         intentObj.putExtra("PLAYER_NAMES", new String[] {player1, player2});
-        // startActivity(intentObj);
         playActivityLauncher.launch(intentObj);
     }
 

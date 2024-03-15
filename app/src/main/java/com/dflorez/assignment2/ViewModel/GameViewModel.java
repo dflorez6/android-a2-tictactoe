@@ -57,28 +57,12 @@ public class GameViewModel extends ViewModel {
         PlayerNames.setValue(playerNames);
     }
 
-    // TODO: Pending for implementation
-    /*
-    public LiveData<Game> setGameData() {
-        return GameData;
-    }
-    */
     public void setGameData(Game gameData) {
         GameData.setValue(gameData);
     }
 
     public void updateGameData(String tileId) {
         LiveData<Game> gameLiveData = getGameData();
-        // Game game = gameLiveData.getValue(); // TODO: Check if this is needed or will create a new instance of Game
-        // Log.i("tag", "Updating game data for tile: " + tileId);
-
-        // Log.i("tag", "gameBoard BEFORE update: " + game.getGameBoard().toString());
-
-        // Update GameBoard
-
-
-        //   Log.i("tag", "gameBoard BEFORE update: " + game.getGameBoard().toString());
-        //   Log.i("tag", "currentPlayer BEFORE update: " + game.getCurrentPlayer());
 
         // Player 1 starts playing
         if (game.getCurrentPlayer() == PLAYER_ONE) {
@@ -103,22 +87,6 @@ public class GameViewModel extends ViewModel {
 
         // Update GameData (LiveData)
         setGameData(game);
-
-        // TODO: IMPLEMENT THIS PART + ANIMATIONS
-        // Game is over, disables all inputs
-        /*
-        if (game.GameFinished)
-        {
-            // Disables all buttons so no more plays can be made
-            foreach (var button in ButtonList())
-            {
-                button.Enabled = false;
-            }
-
-            ResetGame();
-        }
-        */
-
     }
 
     //==========
@@ -128,8 +96,6 @@ public class GameViewModel extends ViewModel {
         PlayerNames = new MutableLiveData<>();
         GameData = new MutableLiveData<>();
         GameData.setValue(game); // Initialize GameData with a Game instance (empty game board)
-        // Log.i("tag", "GameViewModel Default Constructor");
-        // Log.i("tag", game.getGameBoard().toString());
     }
 
     //====================
@@ -137,8 +103,6 @@ public class GameViewModel extends ViewModel {
     //====================
     // UpdateGameBoard()
     public static void updateGameBoard(String tileId, HashMap<String, Integer> gameBoard, int currentPlayer) {
-        Log.i("tag", "updateGameBoard");
-
         // Updates gameBoard values depending on the gameCell clicked
         gameBoard.put(tileId, currentPlayer);
     }

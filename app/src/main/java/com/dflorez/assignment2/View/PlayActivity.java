@@ -54,15 +54,6 @@ public class PlayActivity extends AppCompatActivity {
         String[] playerNames = getIntent().getStringArrayExtra("PLAYER_NAMES");
         viewModel.setPlayerNames(playerNames);
 
-        // TODO: Delete
-        /*
-        // Observe Player Names from ViewModel and update UI
-        viewModel.getPlayerNames().observe(this, names -> {
-            // binding.txtPlayer1.setText(names[0]);
-            // binding.txtPlayer2.setText(names[1]);
-        });
-        */
-
         // Add ImageViews to gameTiles List
         gameTiles.add(binding.tileA1);
         gameTiles.add(binding.tileA2);
@@ -128,8 +119,6 @@ public class PlayActivity extends AppCompatActivity {
         /*
             TODO: PENDING:
             - Add animation when there's a winner
-            - Splash Screen
-            - Remove unused code
          */
         // Button Handlers
         binding.btnQuit.setOnClickListener(new View.OnClickListener() {
