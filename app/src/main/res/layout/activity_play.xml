@@ -15,13 +15,12 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.094"
-        android:visibility="invisible"
-        />
+        app:layout_constraintVertical_bias="0.094" />
 
     <Button
         android:id="@+id/btnPlayAgain"
@@ -29,14 +28,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#009688"
         android:text="@string/play_button_play_again"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.218"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        android:visibility="invisible"
-        />
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/btnQuit"
@@ -44,14 +42,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#E91E63"
         android:text="@string/play_button_quit"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.785"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.2"
-        android:visibility="invisible"
-        />
+        app:layout_constraintVertical_bias="0.2" />
 
     <ImageView
         android:id="@+id/tileA1"

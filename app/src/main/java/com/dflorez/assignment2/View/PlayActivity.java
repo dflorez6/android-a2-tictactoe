@@ -5,6 +5,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -126,7 +127,6 @@ public class PlayActivity extends AppCompatActivity {
         // TODO: ACA QUEDEEEEEEEE
         /*
             TODO: PENDING:
-            - Make sure when I click QUIT to reset MainActivity Inputs back to default values (only hints)
             - Add animation when there's a winner
             - Splash Screen
             - Remove unused code
@@ -135,6 +135,9 @@ public class PlayActivity extends AppCompatActivity {
         binding.btnQuit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Finish PlayActivity and go back to MainActivity and reset player name inputs
+                Intent intentObj = new Intent();
+                setResult(Activity.RESULT_CANCELED, intentObj);
                 finish();
             }
         });

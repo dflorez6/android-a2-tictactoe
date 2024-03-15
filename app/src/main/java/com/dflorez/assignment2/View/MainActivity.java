@@ -1,5 +1,9 @@
 package com.dflorez.assignment2.View;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -28,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        // Reset inputs
+        resetInputs();
+
         // Instantiate the ViewModel with a reference to the ViewModel Class
         viewModel = new ViewModelProvider(this).get(GameViewModel.class);
 
@@ -41,25 +48,52 @@ public class MainActivity extends AppCompatActivity {
                 String player1 = binding.inputPlayer1.getText().toString();
                 String player2 = binding.inputPlayer2.getText().toString();
 
-                // Set player names in ViewModel
-                // TODO: Commented for testing
-                // viewModel.setPlayerNames(new String[] {player1, player2});
-
                 // Start PlayActivity
                 playGame(player1, player2);
-
             }
         });
 
-
-
     }
 
+    //==========
+    // Callbacks
+    //==========
+    // Resets player name inputs once PlayActivity is finished
+    ActivityResultLauncher<Intent> playActivityLauncher = registerForActivityResult(
+            new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+                @Override
+                public void onActivityResult(ActivityResult activityResult) {
+                    // Extract Intent Object Extras from PlayActivity
+                    int results = activityResult.getResultCode();
+
+                    Log.i("tag", "Results: " + results);
+
+                    // Checks status code
+                    if (results == RESULT_CANCELED) {
+                        resetInputs();
+                    }
+
+                }
+
+            }
+    );
+
+    //==========
     // Methods
+    //==========
+    // Intent to start game
     public void playGame(String player1, String player2) {
         Intent intentObj = new Intent(this, PlayActivity.class);
         intentObj.putExtra("PLAYER_NAMES", new String[] {player1, player2});
-        startActivity(intentObj);
+        // startActivity(intentObj);
+        playActivityLauncher.launch(intentObj);
+    }
+
+    // Reset player name inputs
+    public void resetInputs() {
+        binding.inputPlayer1.setText("");
+        binding.inputPlayer2.setText("");
     }
 
 }
