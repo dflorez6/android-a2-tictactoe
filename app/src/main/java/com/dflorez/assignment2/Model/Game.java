@@ -1,5 +1,7 @@
 package com.dflorez.assignment2.Model;
 
+import android.widget.Toast;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,15 +11,15 @@ public class Game {
     // Global Variables / Constants
     //====================
     public final int PLAYER_ONE = 1;
-    public final int PLAYER_TWO = 2;
 
     //====================
-    // Attributes or properties
+    // Attributes
     //====================
     // public Dictionary<String, Integer> GameBoard;
     private Map<String, Integer> GameBoard;
     private int CurrentPlayer;
     private boolean GameFinished;
+    private String GameOverMessage;
 
     //====================
     // Setters/Getters
@@ -44,6 +46,14 @@ public class Game {
 
     public void setGameFinished(boolean gameFinished) {
         GameFinished = gameFinished;
+    }
+
+    public String getGameOverMessage() {
+        return GameOverMessage;
+    }
+
+    public void setGameOverMessage(String gameOverMessage) {
+        GameOverMessage = gameOverMessage;
     }
 
     //====================
@@ -75,9 +85,5 @@ public class Game {
         setCurrentPlayer(currentPlayer);
         setGameFinished(gameFinished);
     }
-
-    //====================
-    // Methods
-    //====================
 
 }

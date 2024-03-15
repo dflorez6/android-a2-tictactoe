@@ -5,5 +5,7 @@
     <string name="home_p1_hint">Player 1: please enter your name (X)</string>
     <string name="home_p2_hint">Player 2: please enter your name (O)</string>
     <string name="home_button">Play Game</string>
+    <string name="play_button_play_again">Play Again?</string>
+    <string name="play_button_quit">Quit Game?</string>
     <!-- Play -->
 </resources>

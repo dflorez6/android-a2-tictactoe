@@ -60,7 +60,7 @@
         android:id="@+id/btnPlayGame"
         android:layout_width="179dp"
         android:layout_height="55dp"
-        android:backgroundTint="#E91E63"
+        android:backgroundTint="#009688"
         android:elevation="8dp"
         android:text="@string/home_button"
         android:textSize="20sp"
