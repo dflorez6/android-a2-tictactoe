@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dflorez.assignment2.Model.Game;
@@ -114,12 +115,6 @@ public class PlayActivity extends AppCompatActivity {
 
         });
 
-
-        // TODO: ACA QUEDEEEEEEEE
-        /*
-            TODO: PENDING:
-            - Add animation when there's a winner
-         */
         // Button Handlers
         binding.btnQuit.setOnClickListener(new View.OnClickListener() {
             @Override
